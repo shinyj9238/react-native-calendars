@@ -50,8 +50,10 @@ class CalendarListItem extends Component {
             const text = row.toString();
             return (
                 <View style={[{height: this.props.calendarHeight, width: this.props.calendarWidth}, this.style.placeholder]}>
-                    <Text allowFontScaling={false} style={[this.style.placeholderText, {marginBottom: 15}]}>{text}</Text>
-                    <ActivityIndicator color='white' size='small'/>
+                    <Text allowFontScaling={false} style={[this.style.placeholderText, {marginBottom: 10}]}>{text}</Text>
+                    <View style={{height: 40, width: 40, justifyContent: 'center', alignItems: 'center'}}>
+                        <ActivityIndicator color='white' size='small'/>
+                    </View>
                 </View>
             );
         }

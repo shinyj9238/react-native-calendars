@@ -179,18 +179,18 @@ class Calendar extends Component {
                 let startDate = parseDate(range.startDateTime);
                 let endDate = parseDate(range.endDateTime);
 
-                if (!dateutils.sameMonth(day, startDate) && !dateutils.sameMonth(day, endDate)) {
+                if (dateutils.isLTE(day, endDate) && dateutils.isGTE(day, startDate)) {
+                    rangeState = 'range';
+                } else {
                     continue;
                 }
 
                 if (dateutils.sameDate(day, startDate) && dateutils.sameDate(day, endDate)) {
-                    rangeState = rangeState === '' ? 'rangeStartEnd' : 'range';
+                    rangeState = 'rangeStartEnd';
                 } else if (dateutils.sameDate(day, startDate)) {
-                    rangeState = rangeState === '' ? 'rangeStart' : 'range';
+                    rangeState = 'rangeStart';
                 } else if (dateutils.sameDate(day, endDate)) {
-                    rangeState = rangeState === '' ? 'rangeEnd' : 'range';
-                } else if (dateutils.isLTE(day, endDate) && dateutils.isGTE(day, startDate)) {
-                    rangeState = 'range';
+                    rangeState = 'rangeEnd';
                 }
             }
         }
