@@ -36,13 +36,19 @@ export default function styleConstructor(theme = {}) {
         rangeStart: {
             borderTopLeftRadius: 100,
             borderBottomLeftRadius: 100,
+            backgroundColor: 'rgba(255,255,255, 10)'
         },
         rangeEnd: {
             borderTopRightRadius: 100,
             borderBottomRightRadius: 100,
+            backgroundColor: 'rgba(255,255,255, 10)'
         },
         rangeStartEnd: {
             borderRadius: 100,
+            backgroundColor: 'rgba(255,255,255, 10)'
+        },
+        rangeStack: {
+            backgroundColor: 'rgba(255,255,255, 10)'
         },
         selected: {
             backgroundColor: appStyle.selectedDayBackgroundColor,

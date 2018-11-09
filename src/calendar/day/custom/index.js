@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {
-    // New
     View,
     TouchableOpacity,
     Text,
@@ -14,7 +13,7 @@ class Day extends Component {
     static propTypes = {
         // TODO: disabled props should be removed
         state: PropTypes.oneOf(['selected', 'disabled', 'today', '']),
-        rangeState: PropTypes.oneOf(['range', 'rangeStart', 'rangeEnd', 'rangeStartEnd', '']),
+        rangeState: PropTypes.oneOf(['range', 'rangeStart', 'rangeEnd', 'rangeStartEnd', 'rangeStack', '']),
 
         // Specify theme properties to override specific styles for calendar parts. Default = {}
         theme: PropTypes.object,

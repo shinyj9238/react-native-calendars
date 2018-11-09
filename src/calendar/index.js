@@ -180,7 +180,7 @@ class Calendar extends Component {
                 let endDate = parseDate(range.endDateTime);
 
                 if (dateutils.isLTE(day, endDate) && dateutils.isGTE(day, startDate)) {
-                    rangeState = 'range';
+                    rangeState = rangeState === '' || rangeState === 'range' ? 'range' : 'rangeStack';
                 } else {
                     continue;
                 }
